@@ -3,8 +3,12 @@ import Link from 'next/link'
 import React from 'react'
 
 export const ProductItem = ({ product }) => {
+    console.log(product)
+    // console.log(product.slug)
     return (
+        // main card div
         <div className='card'>
+            {/* image section linked  */}
             <Link href={`/product/${product.slug}`}>
                 <a>
                     <img
@@ -14,6 +18,7 @@ export const ProductItem = ({ product }) => {
                     />
                 </a>
             </Link>
+            {/* below image info section */}
             <div className='flex flex-col items-center justify-center p-5' >
                 <Link href={`/product/${product.slug}`}>
                     <a>
